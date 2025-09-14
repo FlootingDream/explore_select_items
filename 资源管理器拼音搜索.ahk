@@ -144,6 +144,10 @@ tab_choose()
     update_btt()
 }
 QuickSearch:
+    ; 如果首次输入是空格，则不做任何操作
+    if (hotkeys == "" && A_ThisHotkey = " ")
+        return
+
     Matched := ""
     if(A_ThisHotkey != "Backspace")
     {
